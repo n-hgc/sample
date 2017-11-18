@@ -1,5 +1,5 @@
 def hello
-  p "hello, new world"
+  p "hello, old world"
 end
 
 hello
