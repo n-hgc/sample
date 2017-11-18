@@ -1,0 +1,172 @@
+/* less document */
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+/** color_ptn */
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, 'Roboto', 'Noto Sans Japanese', serif;
+  color: #030303;
+  position: absolute;
+  font-feature-settings: "palt" 1;
+  line-break: strict;
+  punctuation-trim: adjacent;
+}
+p {
+  margin: 0;
+  font-size: 13px;
+}
+@media (min-width: 800px) {
+  p {
+    font-size: 24px;
+  }
+}
+a {
+  width: 100%;
+  height: 100%;
+}
+h1 {
+  font-weight: 400;
+  font-size: 18px;
+}
+.color_ptn_a {
+  color: #00FF00;
+  background: #030015;
+}
+.color_ptn_a .cls-1 {
+  fill: #00FF00;
+}
+.color_ptn_a a {
+  text-decoration: none;
+  color: #00FF00;
+}
+.color_ptn_a a:link {
+  color: #00FF00;
+}
+.color_ptn_a a:visited {
+  color: #00FF00;
+}
+.color_ptn_b {
+  color: #FF74C2;
+  background: #5495D0;
+}
+.color_ptn_b .cls-1 {
+  fill: #FF74C2;
+}
+.color_ptn_b a {
+  text-decoration: none;
+  color: #FF74C2;
+}
+.color_ptn_b a:link {
+  color: #FF74C2;
+}
+.color_ptn_b a:visited {
+  color: #FF74C2;
+}
+#wrapper {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  position: relative;
+  /* 詳細ページ */
+}
+#wrapper .logo {
+  position: absolute;
+  width: 28vw;
+  height: 28vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+@media (min-width: 800px) {
+  #wrapper .logo {
+    width: 10vw;
+    height: 10vw;
+  }
+}
+#wrapper .logo svg {
+  display: block;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
+#wrapper .text_top {
+  position: absolute;
+  width: 80%;
+  left: 0;
+  right: 0;
+  top: 4%;
+  margin: auto;
+  text-align: center;
+}
+#wrapper .text_right {
+  position: absolute;
+  height: 40%;
+  top: 0;
+  bottom: 0;
+  right: 5%;
+  margin: auto;
+  text-align: center;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+@media (min-width: 800px) {
+  #wrapper .text_right {
+    right: 2%;
+  }
+}
+#wrapper .text_left {
+  position: absolute;
+  height: 40%;
+  top: 0;
+  bottom: 0;
+  left: 5%;
+  margin: auto;
+  text-align: center;
+  -webkit-writing-mode: vertical-rl;
+  -ms-writing-mode: tb-rl;
+  writing-mode: vertical-rl;
+}
+@media (min-width: 800px) {
+  #wrapper .text_left {
+    left: 2%;
+  }
+}
+#wrapper .text_bottom {
+  position: absolute;
+  width: 80%;
+  left: 0;
+  right: 0;
+  bottom: 4%;
+  margin: auto;
+  text-align: center;
+}
+#wrapper .title {
+  font-size: 24px;
+  position: absolute;
+  top: 0;
+  right: 10%;
+}
+#wrapper .content {
+  width: 80%;
+  margin: 0 auto;
+  font-weight: 200;
+}
+#wrapper .content:first-child {
+  margin-top: 30%;
+}
+#wrapper .content p {
+  font-size: 11px;
+}
+.ltr_spc_1 {
+  letter-spacing: 0.1em;
+}
+.oswald {
+  font-family: 'Oswald';
+}

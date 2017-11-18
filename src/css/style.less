@@ -1,0 +1,188 @@
+/* less document */
+
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+
+@bak_color_a : #030015;
+@text_color_a　: #00FF00;
+@bak_color_b : #5495D0;
+@text_color_b : #FF74C2;
+@screen-sm-min: 800px;
+
+// mixins
+// for mobile
+.screen_bg(@rules) {
+    @media (min-width: @screen-sm-min) {
+        @rules();
+    }
+}
+
+
+/** color_ptn */
+
+.color_ptn(@text_color , @bak_color) {
+    color: @text_color;
+    background: @bak_color;
+    .cls-1 {
+        fill: @text_color;
+    }
+    a {
+        text-decoration: none;
+        &:link {
+            color: @text_color;
+        }
+        &:visited {
+            color: @text_color;
+        }
+        color: @text_color;
+    }
+}
+
+
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, 'Roboto', 'Noto Sans Japanese', serif;
+    color: #030303;
+    position: absolute;
+    font-feature-settings: "palt" 1;
+    line-break: strict;
+    punctuation-trim: adjacent;
+}
+
+p {
+    margin: 0;
+    font-size: 13px;
+    .screen_bg( {
+        font-size: 24px;
+    }
+    );
+}
+
+a {
+    width: 100%;
+    height: 100%;
+}
+
+h1 {
+	font-weight: 400;
+	font-size: 18px;
+}
+
+
+.color_ptn_a {
+    .color_ptn(@text_color_a, @bak_color_a);
+}
+
+.color_ptn_b {
+    .color_ptn(@text_color_b, @bak_color_b);
+}
+
+#wrapper {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: relative;
+    .logo {
+        position: absolute;
+        width: 28vw;
+        height: 28vw;
+        .screen_bg( {
+            width: 10vw;
+            height: 10vw;
+        }
+        );
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        margin: auto;
+        svg {
+            display: block;
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
+    }
+    .text_top {
+        position: absolute;
+        width: 80%;
+        left: 0;
+        right: 0;
+        top: 4%;
+        margin: auto;
+        text-align: center;
+    }
+    .text_right {
+        position: absolute;
+        height: 40%;
+        top: 0;
+        bottom: 0;
+        right: 5%;
+        .screen_bg({
+        	right: 2%;
+        	});
+        margin: auto;
+        text-align: center;
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    }
+    .text_left {
+        position: absolute;
+        height: 40%;
+        top: 0;
+        bottom: 0;
+        left: 5%;
+        .screen_bg({
+        	left: 2%;
+        	});
+        margin: auto;
+        text-align: center;
+        -webkit-writing-mode: vertical-rl;
+        -ms-writing-mode: tb-rl;
+        writing-mode: vertical-rl;
+    }
+    .text_bottom {
+        position: absolute;
+        width: 80%;
+        left: 0;
+        right: 0;
+        bottom: 4%;
+        margin: auto;
+        text-align: center;
+    }
+
+    /* 詳細ページ */
+    .title {
+    	font-size: 24px;
+    	position: absolute;
+    	top: 0;
+    	right: 10%;
+    }
+
+    .content {
+    	width: 80%;
+    	margin: 0 auto;
+    	font-weight: 200;
+    	&:first-child {
+    		margin-top: 30%;
+    	}
+    	p {
+    		font-size: 11px;
+    	}
+    }
+}
+
+// classes for fine styling
+.ltr_spc_1 {
+    letter-spacing: 0.1em;
+}
+
+.oswald {
+	font-family:'Oswald';
+}
